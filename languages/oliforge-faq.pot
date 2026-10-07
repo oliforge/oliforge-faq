@@ -1,0 +1,217 @@
+# Copyright (C) 2026 OliForge™
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: OliForge FAQ 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/oliforge-faq\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-07T14:12:00+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: oliforge-faq\n"
+
+#. Plugin Name of the plugin
+#: oliforge-faq.php
+#: includes/class-oliforge-faq-elementor-widget.php:13
+#: blocks/faq/editor.js:57
+msgid "OliForge FAQ"
+msgstr ""
+
+#. Description of the plugin
+#: oliforge-faq.php
+msgid "FAQ sets as a custom post type. Each FAQ post holds questions and answers; output via shortcode, Gutenberg block or Elementor widget, with FAQPage schema."
+msgstr ""
+
+#. Author of the plugin
+#: oliforge-faq.php
+msgid "OliForge™"
+msgstr ""
+
+#: includes/class-oliforge-faq-elementor-widget.php:29
+#: blocks/faq/editor.js:17
+msgid "— Select FAQ —"
+msgstr ""
+
+#: includes/class-oliforge-faq-elementor-widget.php:46
+#: includes/class-oliforge-faq-elementor-widget.php:51
+#: includes/class-oliforge-faq-plugin.php:48
+#: includes/class-oliforge-faq-plugin.php:49
+#: includes/class-oliforge-faq-plugin.php:118
+#: blocks/faq/editor.js:30
+msgid "FAQ"
+msgstr ""
+
+#: includes/class-oliforge-faq-elementor-widget.php:60
+#: blocks/faq/editor.js:36
+msgid "Initially open"
+msgstr ""
+
+#: includes/class-oliforge-faq-elementor-widget.php:63
+#: blocks/faq/editor.js:39
+msgid "None"
+msgstr ""
+
+#: includes/class-oliforge-faq-elementor-widget.php:64
+#: blocks/faq/editor.js:40
+msgid "First item"
+msgstr ""
+
+#: includes/class-oliforge-faq-elementor-widget.php:65
+#: blocks/faq/editor.js:41
+msgid "All items"
+msgstr ""
+
+#: includes/class-oliforge-faq-elementor-widget.php:73
+#: blocks/faq/editor.js:46
+msgid "Output FAQPage schema"
+msgstr ""
+
+#: includes/class-oliforge-faq-elementor-widget.php:81
+msgid "Style"
+msgstr ""
+
+#: includes/class-oliforge-faq-elementor-widget.php:86
+msgid "Question typography"
+msgstr ""
+
+#: includes/class-oliforge-faq-elementor-widget.php:93
+msgid "Question color"
+msgstr ""
+
+#: includes/class-oliforge-faq-elementor-widget.php:101
+msgid "Answer color"
+msgstr ""
+
+#: includes/class-oliforge-faq-elementor-widget.php:109
+msgid "Border color"
+msgstr ""
+
+#: includes/class-oliforge-faq-elementor-widget.php:121
+msgid "Select an FAQ in the widget settings."
+msgstr ""
+
+#: includes/class-oliforge-faq-plugin.php:50
+msgid "Add New FAQ"
+msgstr ""
+
+#: includes/class-oliforge-faq-plugin.php:51
+msgid "Edit FAQ"
+msgstr ""
+
+#: includes/class-oliforge-faq-plugin.php:52
+msgid "New FAQ"
+msgstr ""
+
+#: includes/class-oliforge-faq-plugin.php:53
+msgid "All FAQs"
+msgstr ""
+
+#: includes/class-oliforge-faq-plugin.php:54
+msgid "Search FAQs"
+msgstr ""
+
+#: includes/class-oliforge-faq-plugin.php:55
+msgid "No FAQs found."
+msgstr ""
+
+#: includes/class-oliforge-faq-plugin.php:91
+msgid "Questions & Answers"
+msgstr ""
+
+#: includes/class-oliforge-faq-plugin.php:92
+msgid "Usage"
+msgstr ""
+
+#: includes/class-oliforge-faq-plugin.php:98
+msgid "Copy shortcode"
+msgstr ""
+
+#: includes/class-oliforge-faq-plugin.php:99
+msgid "Copy"
+msgstr ""
+
+#: includes/class-oliforge-faq-plugin.php:107
+msgid "List"
+msgstr ""
+
+#: includes/class-oliforge-faq-plugin.php:107
+msgid "Editor"
+msgstr ""
+
+#: includes/class-oliforge-faq-plugin.php:111
+#: includes/class-oliforge-faq-plugin.php:113
+msgid "OliForge"
+msgstr ""
+
+#: includes/class-oliforge-faq-plugin.php:114
+msgid "Engineering without complexity."
+msgstr ""
+
+#: includes/class-oliforge-faq-plugin.php:127
+msgid "Save the FAQ to get its shortcode."
+msgstr ""
+
+#: includes/class-oliforge-faq-plugin.php:131
+msgid "Or use the \"FAQ\" block in Gutenberg / the \"OliForge FAQ\" widget in Elementor."
+msgstr ""
+
+#: includes/class-oliforge-faq-plugin.php:144
+msgid "Add question"
+msgstr ""
+
+#: includes/class-oliforge-faq-plugin.php:156
+msgid "Drag to reorder"
+msgstr ""
+
+#: includes/class-oliforge-faq-plugin.php:157
+msgid "Question"
+msgstr ""
+
+#: includes/class-oliforge-faq-plugin.php:158
+msgid "Remove"
+msgstr ""
+
+#: includes/class-oliforge-faq-plugin.php:160
+msgid "Answer (basic HTML allowed)"
+msgstr ""
+
+#: includes/class-oliforge-faq-plugin.php:217
+msgid "Questions"
+msgstr ""
+
+#: includes/class-oliforge-faq-plugin.php:218
+msgid "Shortcode"
+msgstr ""
+
+#: blocks/faq/editor.js:28
+msgid "FAQ settings"
+msgstr ""
+
+#: blocks/faq/block.json
+msgctxt "block title"
+msgid "OliForge FAQ"
+msgstr ""
+
+#: blocks/faq/block.json
+msgctxt "block description"
+msgid "Display an FAQ created in the OliForge FAQ post type."
+msgstr ""
+
+#: blocks/faq/block.json
+msgctxt "block keyword"
+msgid "faq"
+msgstr ""
+
+#: blocks/faq/block.json
+msgctxt "block keyword"
+msgid "questions"
+msgstr ""
+
+#: blocks/faq/block.json
+msgctxt "block keyword"
+msgid "accordion"
+msgstr ""

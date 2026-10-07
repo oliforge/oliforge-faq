@@ -19,6 +19,7 @@ class OliForge_FAQ_Plugin {
 	}
 
 	private function __construct() {
+		add_action( 'init', array( $this, 'load_textdomain' ) );
 		add_action( 'init', array( $this, 'register_post_type' ) );
 		add_action( 'init', array( $this, 'register_block' ) );
 		add_action( 'init', array( $this, 'register_assets' ) );
@@ -31,6 +32,11 @@ class OliForge_FAQ_Plugin {
 		add_action( 'manage_' . self::POST_TYPE . '_posts_custom_column', array( $this, 'column_content' ), 10, 2 );
 		add_action( 'elementor/widgets/register', array( $this, 'register_elementor_widget' ) );
 		add_action( 'elementor/elements/categories_registered', array( $this, 'register_elementor_category' ) );
+	}
+
+	public function load_textdomain() {
+		// phpcs:ignore PluginCheck.CodeAnalysis.DiscouragedFunctions.load_plugin_textdomainFound -- not hosted on WordPress.org (yet), so translations are not loaded automatically.
+		load_plugin_textdomain( 'oliforge-faq', false, dirname( plugin_basename( OLIFORGE_FAQ_PATH . 'oliforge-faq.php' ) ) . '/languages' );
 	}
 
 	/* ---------- Post type ---------- */
@@ -307,6 +313,7 @@ class OliForge_FAQ_Plugin {
 			OLIFORGE_FAQ_VERSION,
 			true
 		);
+		wp_set_script_translations( 'oliforge-faq-block-editor', 'oliforge-faq', OLIFORGE_FAQ_PATH . 'languages' );
 		register_block_type(
 			OLIFORGE_FAQ_PATH . 'blocks/faq',
 			array( 'render_callback' => array( $this, 'render_block' ) )
