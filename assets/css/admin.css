@@ -1,0 +1,391 @@
+/* OliForge brand tokens — scoped to this plugin's admin screens only
+   (list table, post edit screen, settings page all share the
+   `post-type-oliforge_faq` body class WP core adds automatically). */
+body.post-type-oliforge_faq {
+    --oli-primary:#EF7D1A;
+    --oli-primary-hover:#DA6D0F;
+    --oli-primary-active:#C25F0A;
+    --oli-primary-tint:#FDECD9;
+    --oli-primary-tint-border:#F6CFA0;
+    --oli-ink:#171923;
+    --oli-body:#3F4451;
+    --oli-muted:#6B7280;
+    --oli-border:#E5E7EB;
+    --oli-surface:#FFFFFF;
+    --oli-radius-lg:12px;
+    --oli-radius:8px;
+    --oli-radius-sm:6px;
+    --oli-shadow-card:0 1px 2px rgba(16,24,40,.04), 0 1px 3px rgba(16,24,40,.06)
+}
+
+/* Header (Settings page, and the Polls list table via admin_notices).
+   `clear:both` matters on the list table screen specifically: admin_notices
+   fires before WP core clears its floated Screen Options/Help tab links, and
+   this being a flex container (its own block formatting context) would
+   otherwise narrow itself to avoid overlapping that float instead of
+   spanning the full width like `.wrap` does elsewhere. */
+.oliforge-header {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:16px;
+    clear:both;
+    background:var(--oli-surface);
+    border:1px solid var(--oli-border);
+    border-radius:var(--oli-radius-lg);
+    box-shadow:var(--oli-shadow-card);
+    padding:18px 22px;
+    margin:20px 0 16px
+}
+
+.oliforge-header__brand {
+    display:flex;
+    align-items:center;
+    gap:12px
+}
+
+.oliforge-header__logo {
+    display:block;
+    width:64px;
+    height:64px;
+    object-fit:contain
+}
+
+.oliforge-header__brandtext {
+    display:flex;
+    flex-direction:column;
+    line-height:1.25
+}
+
+.oliforge-header__name {
+    font-size:24px;
+    font-weight:800;
+    color:var(--oli-ink);
+    letter-spacing:.2px
+}
+
+.oliforge-header__tagline {
+    font-size:12px;
+    color:var(--oli-muted)
+}
+
+.oliforge-header__title {
+    display:flex;
+    align-items:center;
+    gap:10px;
+    flex-wrap:wrap
+}
+
+.oliforge-header__title h1 {
+    margin:0;
+    padding:0;
+    font-size:20px;
+    line-height:1.3;
+    font-weight:700;
+    color:var(--oli-ink)
+}
+
+.oliforge-accent {
+    color:var(--oli-primary)
+}
+
+.oliforge-lede {
+    color:var(--oli-muted);
+    margin:0 0 18px;
+    max-width:760px
+}
+
+.oliforge-badge {
+    display:inline-flex;
+    align-items:center;
+    padding:2px 10px;
+    border-radius:999px;
+    font-size:12px;
+    font-weight:600;
+    border:1px solid transparent;
+    white-space:nowrap
+}
+
+.oliforge-badge--version {
+    background:var(--oli-primary-tint);
+    color:var(--oli-primary-active);
+    border-color:var(--oli-primary-tint-border)
+}
+
+.oliforge-card {
+    background:var(--oli-surface);
+    border:1px solid var(--oli-border);
+    border-radius:var(--oli-radius-lg);
+    box-shadow:var(--oli-shadow-card);
+    padding:20px 22px;
+    margin-bottom:18px
+}
+
+/* Buttons */
+body.post-type-oliforge_faq .button-primary {
+    background:var(--oli-primary);
+    border-color:var(--oli-primary);
+    color:#fff;
+    font-weight:600;
+    border-radius:var(--oli-radius);
+    box-shadow:none;
+    text-shadow:none
+}
+
+body.post-type-oliforge_faq .button-primary:hover,
+body.post-type-oliforge_faq .button-primary:focus {
+    background:var(--oli-primary-hover);
+    border-color:var(--oli-primary-hover);
+    color:#fff
+}
+
+body.post-type-oliforge_faq .button-primary:active {
+    background:var(--oli-primary-active);
+    border-color:var(--oli-primary-active)
+}
+
+/* FAQ list table — everything WP core
+   renders below the branded header (title, filters, table, pagination)
+   wrapped in one white card. Scoped to `edit-php` too, not just the shared
+   post-type body class, so the single-FAQ edit screen isn't boxed. */
+body.edit-php.post-type-oliforge_faq .wrap {
+    background:var(--oli-surface);
+    border:1px solid var(--oli-border);
+    border-radius:var(--oli-radius-lg);
+    box-shadow:var(--oli-shadow-card);
+    padding:20px 22px
+}
+
+body.post-type-oliforge_faq .wp-list-table {
+    border:1px solid var(--oli-border);
+    border-radius:var(--oli-radius);
+    overflow:hidden;
+    border-spacing:0
+}
+
+body.post-type-oliforge_faq .wp-list-table thead th,
+body.post-type-oliforge_faq .wp-list-table thead td {
+    background:#FAFAFB;
+    color:var(--oli-ink)
+}
+
+body.post-type-oliforge_faq .wp-list-table tbody tr:hover {
+    background:#FAFAFB
+}
+
+/* Interactive link color (row title, row actions, sortable column headers
+   and their sort arrows, All/Published filters) — WP core defaults these to
+   admin blue; the rest of this table is already orange-branded above. */
+body.post-type-oliforge_faq .wp-list-table a,
+body.post-type-oliforge_faq .subsubsub a {
+    color:var(--oli-primary)
+}
+
+body.post-type-oliforge_faq .wp-list-table a:hover,
+body.post-type-oliforge_faq .wp-list-table a:focus,
+body.post-type-oliforge_faq .subsubsub a:hover {
+    color:var(--oli-primary-hover)
+}
+
+body.post-type-oliforge_faq .subsubsub a.current {
+    color:var(--oli-ink)
+}
+
+/* The row title itself reads as a heading, not a link — kept dark instead
+   of orange like the other row links above, with orange only as a hover
+   hint that it's clickable. */
+body.post-type-oliforge_faq .wp-list-table .row-title {
+    color:var(--oli-ink)
+}
+
+body.post-type-oliforge_faq .wp-list-table .row-title:hover,
+body.post-type-oliforge_faq .wp-list-table .row-title:focus {
+    color:var(--oli-primary)
+}
+
+body.post-type-oliforge_faq .page-title-action,
+body.post-type-oliforge_faq #doaction,
+body.post-type-oliforge_faq #doaction2,
+body.post-type-oliforge_faq #post-query-submit {
+    background:#fff;
+    border-color:var(--oli-primary);
+    color:var(--oli-primary);
+    border-radius:var(--oli-radius-sm)
+}
+
+body.post-type-oliforge_faq .page-title-action:hover,
+body.post-type-oliforge_faq .page-title-action:focus,
+body.post-type-oliforge_faq #doaction:hover,
+body.post-type-oliforge_faq #doaction2:hover,
+body.post-type-oliforge_faq #post-query-submit:hover {
+    background:var(--oli-primary);
+    border-color:var(--oli-primary);
+    color:#fff
+}
+
+body.post-type-oliforge_faq .search-box input[type="search"] {
+    border-radius:var(--oli-radius-sm);
+    border-color:var(--oli-primary);
+    padding:6px 10px
+}
+
+body.post-type-oliforge_faq .search-box input[type="search"]:focus {
+    border-color:var(--oli-primary);
+    box-shadow:0 0 0 1px var(--oli-primary)
+}
+
+body.post-type-oliforge_faq .search-box #search-submit {
+    background:#fff;
+    border-color:var(--oli-primary);
+    color:var(--oli-primary);
+    border-radius:var(--oli-radius-sm)
+}
+
+body.post-type-oliforge_faq .search-box #search-submit:hover {
+    background:var(--oli-primary);
+    border-color:var(--oli-primary);
+    color:#fff
+}
+
+body.post-type-oliforge_faq .tablenav-pages a.button {
+    background:#fff;
+    border-color:var(--oli-primary);
+    color:var(--oli-primary);
+    border-radius:var(--oli-radius-sm)
+}
+
+body.post-type-oliforge_faq .tablenav-pages a.button:hover {
+    background:var(--oli-primary);
+    border-color:var(--oli-primary);
+    color:#fff
+}
+
+body.post-type-oliforge_faq .tablenav-pages .paging-input .current-page {
+    border-radius:var(--oli-radius-sm);
+    border-color:var(--oli-primary)
+}
+
+body.post-type-oliforge_faq .tablenav-pages .total-pages {
+    color:var(--oli-ink);
+    font-weight:600
+}
+
+@media (max-width: 782px) {
+    .oliforge-header {
+        flex-direction:column;
+        align-items:flex-start
+    }
+}
+
+/* FAQ editor */
+body.post-type-oliforge_faq .postbox {
+    border:1px solid var(--oli-border);
+    border-radius:var(--oli-radius-lg);
+    box-shadow:var(--oli-shadow-card)
+}
+
+body.post-type-oliforge_faq .postbox .postbox-header {
+    border-bottom:1px solid var(--oli-border);
+    border-radius:var(--oli-radius-lg) var(--oli-radius-lg) 0 0
+}
+
+body.post-type-oliforge_faq .postbox .hndle {
+    color:var(--oli-ink);
+    font-weight:700
+}
+
+body.post-type-oliforge_faq #titlediv #title {
+    border:1px solid var(--oli-border);
+    border-radius:var(--oli-radius);
+    padding:8px 12px
+}
+
+body.post-type-oliforge_faq #titlediv #title:focus,
+body.post-type-oliforge_faq .oliforge-faq-row input[type="text"]:focus,
+body.post-type-oliforge_faq .oliforge-faq-row textarea:focus {
+    border-color:var(--oli-primary);
+    box-shadow:0 0 0 1px var(--oli-primary)
+}
+
+body.post-type-oliforge_faq .oliforge-faq-row {
+    border:1px solid var(--oli-border);
+    border-radius:var(--oli-radius);
+    background:#FAFAFB;
+    padding:12px;
+    margin-bottom:10px
+}
+
+body.post-type-oliforge_faq .oliforge-faq-row.ui-sortable-helper {
+    box-shadow:0 4px 12px rgba(16,24,40,.12)
+}
+
+body.post-type-oliforge_faq .oliforge-faq-row__head {
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin-bottom:8px
+}
+
+body.post-type-oliforge_faq .oliforge-faq-row input[type="text"],
+body.post-type-oliforge_faq .oliforge-faq-row textarea {
+    border-radius:var(--oli-radius-sm);
+    border-color:var(--oli-border)
+}
+
+body.post-type-oliforge_faq .oliforge-faq-handle {
+    cursor:move;
+    color:var(--oli-primary)
+}
+
+body.post-type-oliforge_faq .oliforge-faq-remove {
+    color:#B42318;
+    white-space:nowrap
+}
+
+body.post-type-oliforge_faq #publish {
+    background:var(--oli-primary);
+    border-color:var(--oli-primary);
+    border-radius:var(--oli-radius);
+    color:#fff;
+    font-weight:600
+}
+
+body.post-type-oliforge_faq #publish:hover {
+    background:var(--oli-primary-hover);
+    border-color:var(--oli-primary-hover)
+}
+
+body.post-type-oliforge_faq #oliforge-faq-add {
+    background:#fff;
+    border-color:var(--oli-primary);
+    color:var(--oli-primary);
+    border-radius:var(--oli-radius-sm)
+}
+
+body.post-type-oliforge_faq #oliforge-faq-add:hover {
+    background:var(--oli-primary);
+    color:#fff
+}
+
+body.post-type-oliforge_faq code.oliforge-faq-shortcode {
+    background:var(--oli-primary-tint);
+    color:var(--oli-primary-active);
+    border:1px solid var(--oli-primary-tint-border);
+    border-radius:var(--oli-radius-sm);
+    padding:2px 8px
+}
+
+body.post-type-oliforge_faq .oliforge-faq-copy {
+    border:none;
+    background:none;
+    box-shadow:none;
+    padding:0 4px;
+    position:relative;
+    top:-5px
+}
+
+body.post-type-oliforge_faq .oliforge-faq-copy img {
+    vertical-align:middle;
+    pointer-events:none
+}

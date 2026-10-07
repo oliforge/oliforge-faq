@@ -1,0 +1,19 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "oliforge/faq",
+	"title": "OliForge FAQ",
+	"category": "widgets",
+	"icon": "editor-help",
+	"description": "Display an FAQ created in the OliForge FAQ post type.",
+	"keywords": ["faq", "questions", "accordion"],
+	"textdomain": "oliforge-faq",
+	"attributes": {
+		"faqId": { "type": "number", "default": 0 },
+		"open": { "type": "string", "default": "none" },
+		"schema": { "type": "boolean", "default": true }
+	},
+	"supports": { "html": false, "align": ["wide", "full"] },
+	"editorScript": "oliforge-faq-block-editor",
+	"style": "oliforge-faq"
+}
