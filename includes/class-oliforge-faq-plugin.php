@@ -24,7 +24,7 @@ class OliForge_FAQ_Plugin {
 		add_action( 'init', array( $this, 'register_block' ) );
 		add_action( 'init', array( $this, 'register_assets' ) );
 		add_action( 'add_meta_boxes', array( $this, 'add_meta_boxes' ) );
-		add_action( 'save_post_' . self::POST_TYPE, array( $this, 'save_items' ), 10, 2 );
+		add_action( 'save_post_' . self::POST_TYPE, array( $this, 'save_items' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, 'admin_assets' ) );
 		add_action( 'admin_notices', array( $this, 'render_header' ) );
 		add_shortcode( 'oliforge_faq', array( $this, 'shortcode' ) );
@@ -163,7 +163,7 @@ class OliForge_FAQ_Plugin {
 		<?php
 	}
 
-	public function save_items( $post_id, $post ) {
+	public function save_items( $post_id ) {
 		if ( ! isset( $_POST[ self::NONCE . '_nonce' ] ) || ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST[ self::NONCE . '_nonce' ] ) ), self::NONCE ) ) {
 			return;
 		}
